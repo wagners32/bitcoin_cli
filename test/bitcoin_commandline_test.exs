@@ -6,7 +6,7 @@ defmodule BitcoinCommandlineTest do
     assert BitcoinCommandline.bitcoin_url() == "https://blockchain.info/ticker"
   end
 
-  test "bitcoin price" do
+  test "bitcoin usd price" do
     assert 17442.92 == BitcoinCommandline.get_price("USD")
   end
   
