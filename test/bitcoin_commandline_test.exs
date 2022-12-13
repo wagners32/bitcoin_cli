@@ -3,8 +3,11 @@ defmodule BitcoinCommandlineTest do
   doctest BitcoinCommandline
 
   test "ticker url" do
-    assert BitcoinCommandline.ticker_url == "https://blockchain.info/ticker"
+    assert BitcoinCommandline.bitcoin_url() == "https://blockchain.info/ticker"
   end
 
+  test "bitcoin price" do
+    assert 17442.92 == BitcoinCommandline.get_price("USD")
+  end
   
 end
